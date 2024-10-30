@@ -6,25 +6,53 @@
   <title>eHU Bluetooth App</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body style="height: 100vh; margin: 0; display: flex; justify-content: center; align-items: center; background-color: #f9f9f9;">
   <div class="main-container" style="display: flex; height: 90vh; width: 90vw; gap: 20px; justify-content: center; align-items: stretch;">
+
 
     <!-- Linker Informationsbereich für OBD-Befehle -->
     <div class="info-panel">
       <h2>OBD-Befehle</h2>
       <div class="accordion">
-        <button class="accordion-button">OBD Command 1: 0100</button>
+        <button class="accordion-button">OBD Modus 1: 01..</button>
         <div class="accordion-content">
-          <p>Überprüft die unterstützten PIDs des Fahrzeugs.</p>
+          <p>Aktuelle Motorbetriebsdaten</p>
         </div>
-        <button class="accordion-button">OBD Command 2: 010C</button>
+        <button class="accordion-button">OBD Modus 2: 02..</button>
         <div class="accordion-content">
-          <p>Liest die Motordrehzahl in Umdrehungen pro Minute (RPM).</p>
+          <p>Freeze-Frame-Daten</p>
         </div>
-        <button class="accordion-button">OBD Command 3: 010D</button>
+        <button class="accordion-button">OBD Modus 3: 03..</button>
         <div class="accordion-content">
-          <p>Ermittelt die Fahrzeuggeschwindigkeit.</p>
+          <p>Fehlercodes (DTCs) lesen</p>
         </div>
+        <button class="accordion-button">OBD Modus 4: 04..</button>
+        <div class="accordion-content">
+          <p>Fehlercodes löschen</p>
+        </div>
+      <button class="accordion-button">OBD Modus 5: 05..</button>
+      <div class="accordion-content">
+        <p>Sauerstoffsensorüberwachung</p>
+      </div>
+    <button class="accordion-button">OBD Modus 6: 06..</button>
+    <div class="accordion-content">
+      <p>Ergebnisse von On-Board-Überwachungstests</p>
+    </div>
+  <button class="accordion-button">OBD Modus 7: 07..</button>
+  <div class="accordion-content">
+    <p> Fehlercodes der aktuell laufenden Zyklen</p>
+  </div>
+  <button class="accordion-button">OBD Modus 8: 08..</button>
+  <div class="accordion-content">
+    <p> Steuerung der On-Board-Systemkomponenten</p>
+  </div><button class="accordion-button">OBD Modus 9: 09..</button>
+  <div class="accordion-content">
+    <p> Fahrzeuginformationen</p>
+  </div><button class="accordion-button">OBD Modus 10: 10..</button>
+  <div class="accordion-content">
+    <p> Permanente Fehlercodes</p>
+  </div>
       </div>
     </div>
 
@@ -65,4 +93,3 @@
 
 </body>
 </html>
-
