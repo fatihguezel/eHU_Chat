@@ -7,15 +7,60 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>eHU Bluetooth App</h1>
-    <button onclick="connectToDevice()">Bluetooth verbinden</button>
-    <div id="chat">
-      <div id="messages"></div>
+  <div class="main-container">
+    
+    <!-- Linker Informationsbereich für OBD-Befehle -->
+    <div class="info-panel">
+      <h2>OBD-Befehle</h2>
+      <div class="accordion">
+        <button class="accordion-button">OBD Command 1: 0100</button>
+        <div class="accordion-content">
+          <p>Überprüft die unterstützten PIDs des Fahrzeugs.</p>
+        </div>
+        <button class="accordion-button">OBD Command 2: 010C</button>
+        <div class="accordion-content">
+          <p>Liest die Motordrehzahl in Umdrehungen pro Minute (RPM).</p>
+        </div>
+        <button class="accordion-button">OBD Command 3: 010D</button>
+        <div class="accordion-content">
+          <p>Ermittelt die Fahrzeuggeschwindigkeit.</p>
+        </div>
+      </div>
     </div>
-    <input type="text" id="inputMessage" placeholder="Nachricht eingeben..." />
-   <button onclick="sendMessage(document.getElementById('inputMessage').value)">Senden</button>
+
+    <!-- Chat-Bereich -->
+    <div class="container">
+      <h1>eHU Bluetooth App</h1>
+      <div class="bluetooth-connect" onclick="connectToDevice()">Bluetooth verbinden</div>
+      <div id="chat">
+        <div id="messages"></div>
+      </div>
+      <input type="text" id="inputMessage" class="message-input" placeholder="Nachricht eingeben..." />
+      <button class="send-button" onclick="sendMessage(document.getElementById('inputMessage').value)">Senden</button>
+    </div>
+
+    <!-- Rechter Informationsbereich für AT-Befehle -->
+    <div class="info-panel">
+      <h2>Hilfreiche AT-Commands</h2>
+      <div class="accordion">
+        <button class="accordion-button">AT Command 1: ATZ</button>
+        <div class="accordion-content">
+          <p>Setzt das Gerät auf die Werkseinstellungen zurück.</p>
+        </div>
+        <button class="accordion-button">AT Command 2: ATH1</button>
+        <div class="accordion-content">
+          <p>Schaltet Echo der eingegebenen Zeichen ein.</p>
+        </div>
+        <button class="accordion-button">AT Command 3: ATI</button>
+        <div class="accordion-content">
+          <p>Zeigt die Version der Software.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
+
   <script src="app.js"></script>
+  <script src="accordion.js"></script>
 </body>
 </html>
