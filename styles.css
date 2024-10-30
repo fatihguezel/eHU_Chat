@@ -9,11 +9,12 @@ body {
 }
 
 .container {
-  width: 400px;
+  width: 300px;
   background: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #007bff; /* Fügt eine blaue Umrandung hinzu */
 }
 
 h1 {
@@ -24,7 +25,7 @@ h1 {
 #chat {
   border: 1px solid #ccc;
   padding: 10px;
-  height: 600px;
+  height: 400px;
   overflow-y: auto;
   margin-bottom: 10px;
 }
