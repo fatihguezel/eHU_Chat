@@ -1,55 +1,146 @@
+/* Grundlegende Stildefinitionen für die gesamte Seite */
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f9f9f9;
-}
-
-.container {
-  width: 300px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 2px solid #007bff; /* Fügt eine blaue Umrandung hinzu */
-}
-
-h1 {
-  text-align: center;
-  color: #007bff;
-}
-
-#chat {
-  border: 1px solid #ccc;
-  padding: 10px;
-  height: 400px;
-  overflow-y: auto;
-  margin-bottom: 10px;
-}
-
-.message {
-  padding: 5px 10px;
-  border-radius: 15px;
-  margin-bottom: 5px;
-}
-
-.message.user {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.message.device {
-  background-color: #f1f1f1;
-  color: #333;
-}
-
-input, button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Hauptcontainer für Chat und Info-Kästen */
+  .main-container {
+    display: flex;
+    gap: 20px; /* Abstand zwischen den Spalten */
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  /* Container für den Chat-Bereich */
+  .container {
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #007bff;
+  }
+  
+  /* Stil für die Überschrift eHU Bluetooth App */
+  h1 {
+    text-align: center;
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Chat-Bereich mit Scrollfunktion */
+  #chat {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 500px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Nachrichtenstile */
+  .message {
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+  }
+  
+  /* Stil für Benutzer-Nachrichten */
+  .message.user {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Stil für Geräte-Nachrichten */
+  .message.device {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  /* Stil für das "Bluetooth verbinden"-Kästchen */
+  .bluetooth-connect {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #e6f2ff;
+    color: #007bff;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  /* Stil für das Nachrichten-Eingabefeld */
+  input.message-input {
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Stil für den "Senden"-Button */
+  button.send-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button.send-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Stil für die Info-Kästen */
+  .info-panel {
+    width: 250px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #007bff;
+  }
+  
+  .info-panel h2 {
+    color: #007bff;
+    text-align: center;
+  }
+  
+  /* Accordion-Stile für OBD- und AT-Befehle */
+  .accordion-button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .accordion-content {
+    background-color: #e6f2ff;
+    display: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
